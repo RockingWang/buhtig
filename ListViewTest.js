@@ -89,7 +89,7 @@ export default class ListViewTest extends Component{
     }
     renderRow(item){
         return <View>
-            <Text style.>{item.fullName}</Text>
+            <Text>{item.fullName}</Text>
             <Text>{item.email}</Text>
         </View>
     }
