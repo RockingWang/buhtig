@@ -2,11 +2,10 @@
  * Created by leechee on 2017-07-15.
  */
 
-import React,{Component, PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {
     View,
     Text,
-    Image,
     StyleSheet,
     Platform,
     StatusBar
@@ -21,7 +20,7 @@ const StatusBarShape = {
     hidden: PropTypes.bool
 };
 
-export default class NavigationBar extends Component{
+export default class NavigationBar extends Component {
     // 设置属性约束
     static propTypes = {
         style: View.propTypes.style,
@@ -38,7 +37,8 @@ export default class NavigationBar extends Component{
             hidden: false
         }
     };
-    constructor(props){
+
+    constructor(props) {
         super(props);
         this.state = {
             title: '',
@@ -46,7 +46,7 @@ export default class NavigationBar extends Component{
         }
     }
 
-    render(){
+    render() {
         let status = <View style={[styles.statusBar, this.props.statusBar]}>
             <StatusBar {...this.props.statusBar}/>
         </View>;
@@ -69,12 +69,12 @@ export default class NavigationBar extends Component{
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'gray'
+        backgroundColor: '#2196F3'
     },
     navBar: {
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: Platform.OS === 'ios'? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIGHT_ANDROID,
+        height: Platform.OS === 'ios' ? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIGHT_ANDROID,
         flexDirection: 'row'
     },
     titleViewContainer: {
